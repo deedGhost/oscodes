@@ -48,12 +48,13 @@ int main(){
             continue;
         }
         if(p[ind].rt==-1)
-            p[ind].rt-=p[ind].at;
+            p[ind].rt=curr;
         curr+=p[ind].bt;
         p[ind].comp=1;
         p[ind].ct=curr;
         p[ind].tat=p[ind].ct-p[ind].at;
         p[ind].wt=p[ind].tat-p[ind].bt;
+        p[ind].rt=p[ind].rt-p[ind].at;
         t++;
     }
     printf("PID\tAT\tBT\tCT\tTAT\tWT\tRT\n");
