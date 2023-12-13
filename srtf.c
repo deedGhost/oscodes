@@ -40,7 +40,7 @@ int main(){
             continue;
         }
         if(p[ind].rt==-1)
-            p[ind].rt+=p[ind].at;
+            p[ind].rt=curr;
         p[ind].rem--;
         curr++;
         if(p[ind].rem==0){
@@ -48,6 +48,7 @@ int main(){
             p[ind].ct=curr;
             p[ind].tat=p[ind].ct-p[ind].at;
             p[ind].wt=p[ind].tat-p[ind].bt;
+            p[ind].rt=p[ind].rt-p[ind].at;
             t++;
         }
     }
